@@ -20,6 +20,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Coda', cursive;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
@@ -68,6 +70,9 @@ main {
 	flex: 1 1 auto;
 	background-color: lightgrey;
 	width: 60vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .form-intro {
@@ -77,6 +82,26 @@ main {
 
 .form-card {
 	background-color: ghostwhite;
+	padding: 2rem;
+}
+
+.form-input-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.input-wrapper {
+	padding: 2vmin 15vmin 2vmin 0;
+}
+
+label {
+	display: block;
+}
+
+input {
+	border-radius: 0.4em;
+	width: min(50vw, 250px);
+	border: 0.1125em solid black;
 }
 
 @media screen and (max-width: 700px) {
