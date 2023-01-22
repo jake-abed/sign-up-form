@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
 
 :root {
+	--bluesteel: #5c93d3;
+	--lightbluesteel: #bae4fd;
+	
 	font-size: 16px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	background-color: ghostwhite;
@@ -78,7 +81,12 @@ main {
 .form-intro {
 	font-size: clamp(1rem, 1.5rem, 2rem);
 	font-weight: 600;
-	padding: 2vmin 5vmin 2vmin 5vmin;
+	padding: 0 5vmin 4vmin 5vmin;
+	text-shadow: 1px 1px 1px var(--bluesteel);
+}
+
+.form-intro:first-of-type {
+	margin-top: 2rem;
 }
 
 .form-card {
@@ -93,7 +101,7 @@ main {
 }
 
 .input-wrapper {
-	padding: 1vmin 15vmin 1vmin 0;
+	padding: 1vh 10vh 1vh 0;
 }
 
 label {
@@ -105,14 +113,14 @@ input {
 	border-radius: 0.4em;
 	width: min(70vw, 250px);
 	height: 2rem;
-	border: 0.5px solid #bae4fd;
+	border: 0.5px solid var(--lightbluesteel);
 	padding-left: 6px;
 }
 
 input[type="text"]:placeholder-shown,
 input[type="password"]:placeholder-shown,
 input[type="email"]:placeholder-shown{
-	border: 0.5px solid #bae4fd;
+	border: 0.5px solid var(--lightbluesteel);
 	box-shadow: none;
 }
 
@@ -121,7 +129,7 @@ input[type="text"]:focus,
 input[type="email"]:focus-visible,
 input[type="email"]:focus
  {
-	border: 1px solid #88acd4;
+	border: 1px solid var(--bluesteel);
 	box-shadow: 0px 0px 3px 1px #48608155;
 	outline: 0px;
 }
@@ -144,13 +152,29 @@ input:valid {
 
 button {
 	width: min(400px,70vw);
+	font-family: 'Coda', cursive;
+	text-shadow: 1px 1px 3px var(--lightbluesteel);
 	height: 3rem;
 	border: 0;
-	margin: 2rem auto 1rem 2rem;
+	margin: 3rem auto 1rem 2rem;
 	font-size: 1.5rem;
 	border-radius: 0.4rem;
-	background-color: #88acd4;
+	background-color: var(--bluesteel);
 	box-shadow: 1px 1px 9px 1px #66666655;
+}
+
+button:hover {
+	cursor:pointer;
+}
+
+.account-callout {
+	margin-top: 2rem;
+	margin-left: 2rem;
+	margin-bottom: 2rem;
+}
+
+.account-callout > a {
+	color: var(--bluesteel);
 }
 
 @media screen and (max-width: 700px) {
