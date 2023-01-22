@@ -20,36 +20,37 @@
 				<p class="form-intro">Social media is cursed! In the best way! </p>
 				<div class="form-card">
 					<h2>Let's get cursed!</h2>
-					<form action="" method="post">
+					<form id="sign-up-form" action="" method="post">
 						<div class="form-input-container">
 							<div class="input-wrapper">
 								<label for="first-name">First Name</label>
-								<input id="first-name" type="text">
+								<input id="first-name" type="text" required placeholder="John">
 							</div>
 							<div class="input-wrapper">
 								<label for="last-name">Last Name</label>
-								<input id="last-name" type="text">
+								<input id="last-name" type="text" required placeholder="Darksouls">
 							</div>
 							<div class="input-wrapper">
 								<label for="email">Email</label>
-								<input id="email" type="text">
+								<input id="email" type="email" required placeholder="chosenundead@lordran.net">
 							</div>
 							<div class="input-wrapper">
-								<label for="phone">Phone Number</label>
-								<input id="phone" type="text">
+								<label for="phone">Phone Number (Optional)</label>
+								<input id="phone" type="text" placeholder="(800)420-6969">
 							</div>
 							<div class="input-wrapper">
 								<label for="password">Password</label>
-								<input id="password" type="password">
+								<input placeholder="Min 8, Upper, Lower, & Num/Special" id="password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
 							</div>
 							<div class="input-wrapper">
-								<label for="password-confirm">Password</label>
-								<input id="passoword-confirm" type="password">
+								<label for="password-confirm">Confirm Password</label>
+								<input placeholder="Min 8, Upper, Lower, & Num/Special" id="password-confirm" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
 							</div>
 						</div>
 					</form>
 				</div>
-
+				<button form="sign-up-form" type="submit">SIGN UP</button>
+				<p>Already have an account? <a href="#">Log in!</a></p>
 			</div>
 		</main>
 </body>
